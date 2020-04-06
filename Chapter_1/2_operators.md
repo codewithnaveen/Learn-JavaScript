@@ -1,6 +1,8 @@
 #### Operators
 
+
 **Operators** take one or more values(or variable), perform an operation, and return a value.
+
 
 For example : `1 + 2;` the output is 3
 
@@ -12,6 +14,7 @@ In the preceding code:
 + The result value is 3.
 + The whole thing is called expression.
 
+
 Instead of using the values 1 and 2 directly in the expression, you can use variables.
 
 `var a = 1;`
@@ -20,7 +23,10 @@ Instead of using the values 1 and 2 directly in the expression, you can use vari
 
 `a + 1;` it results into 2 
 
+
 You can also variable to store the result of expression  `var c = a + b;` 
+
+
 
 
 |**Opertaor**|**Operation**|**Example**|**Output**|
@@ -34,10 +40,14 @@ You can also variable to store the result of expression  `var c = a + b;`
 |--| Decrement a vaue by 1 |`var a = 123;`  `var b = a--;`|`now b is 123 and a is 122`|
 
 
-The `var a = 1;e ` is also an operation, It's the simple assignment operation, and = is the **simple assignment operator**.
+
+
+The `var a = 1;` is also an operation, It's the simple assignment operation, and = is the **simple assignment operator**.
+
 
 
 There is also a family of operators that are a combination of an assignment and arithmetic operator. These are called **Compound operators**.
+
 
 `var a = 5;`
 
