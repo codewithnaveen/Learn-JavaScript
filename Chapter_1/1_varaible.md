@@ -9,7 +9,7 @@
 
 To declare a varaible, it uses **var** keyword
 
-]`var a;`
+`var a;`
 `var thisIsAVariable;`
 `var _and_this_too;`
 `var mix12three;`
