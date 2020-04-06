@@ -12,7 +12,7 @@ In the preceding code:
 + The operation is addition
 + The input values are 1 and 2 (they are also called opernds)
 + The result value is 3.
-+ The whole thing is called expression.
++ The whole thing is called **expression**.
 
 
 Instead of using the values 1 and 2 directly in the expression, you can use variables.
