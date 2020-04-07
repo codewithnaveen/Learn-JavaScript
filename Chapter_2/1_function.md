@@ -87,10 +87,92 @@ function sumOnSteroids(){
 
  ---
 
+ ### Default parameters
+
+ Function parameters can be assigned default values. While calling the function, if a parameter is omitted, the default value assigned to the parameter is used:
+
+ ```
+ function render(fog_level = 0, spark_level = 100){
+     console.log(`Fog Level: ${fog_level} and Spark Level: ${spark_level});
+ }
+ ```
+ ```
+ render(10); // Fog Level: 10 and Spark Level: 100
  
+ In the above example, we omitting the spark_level parametr, and hence the default value assigned to the parameter is used.
+ ```
+
+ ```
+render(undefined, 10);  //  Fog Level: 0 and Spark Level: 10
+
+In the above example, undefined is consider as absence of parameter.
+```
+
+Suppose if this is the case :
+```
+var scope = "outer_scope";
+function scoper(val = scope){
+    var scope = "inner_scope";
+    console.log(val);  // outer_scope
+} 
+
+scoper();
+```
+ 
+In the above example, you may expect **val** get shadowed by their inner defination of 
+ the scope variable, but the default parameter have their own scope, the value assigned to val is unaffected by the inner scope.
+
+ ---
+
+ ### Rest parameters
+ 
+ ES6 introduces rest parameters. Rest parameters allow us to send an arbitrary number of parameters to a function in form of array. Rest parameter can only be the last one in the list of parameters, and there can be only be one rest parameter.
+
+ Putting a rest operator(...) before the last formal parameter indicates that parameter is rest parameter.
+ Let's take one example:
+ ```
+ function sayThings(stack, ...desc){
+     console.log(`Stack is ${$stack} and it contains ${desc});
+ }
+
+sayThings("MERN", "MongoDB", "ExpressJs", "ReactJs", "NodeJs"); 
+
+// Output:
+// Stack is MERN it contains MongoDB,ExpressJs,ReactJs,NodeJs
+```
+The first parametert passed to the function is recevied in stack, while the rest parameters are recevied as an array.
+
+---
+
+### Spread operator
+
+A spread operator looks exactly like a rest operator but performs the exact oppisite function. Spread operator are used while providing arguments while calling a function or defining an array.
+The spread operator takes an array and splits its elements into individual variables.
 
 
+```
+function sumAll(a, b, c){
+    return a + b +c;
+}
 
+var numbers = [6, 7, 8];
 
+//ES5 way to pass an array as an argument of a function
 
+console.log(sumAll.apply(null,numbers)); // 21
 
+// ES6 spread operator 
+
+console.log(...numbers); // 21
+```
+
+we can use spread operator for defining an array:
+
+```
+var midweek = ['Wed', 'Thu];
+var weekend = ['Sat', 'Sun'];
+var week = ['Mon', 'Tue', ...midweek, 'Fri', ...weekend];
+console.log(week);
+
+// [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
+```
