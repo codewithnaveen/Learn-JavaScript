@@ -32,7 +32,7 @@ If you want to know the type of a varaible or a value, you can use the special *
 
 ---
 
-### Number Data Type
+## Number Data Type
 
 This include floating point numbers as well as integers. 
 
@@ -164,3 +164,41 @@ console.log(Number.isInteger(1.23)) // false
 
 
 ---
+
+## String Data Type
+
+A String is a sequence of characters used to represent text. In JavaScript, any value placed between single and double quotes is considered a string. This means that 1 is a number, but "1" is a string.
+
+```
+> var s = "some character";
+> typeof s;
+string
+
+> var s = 'some characters inckude 123';
+> typeof s;
+string
+
+//
+Here's an example of a number used in the string context:
+> var s = '1';
+> typeof s;
+string
+
+// If you put nothing in quotes, it's still a string(an empty string):
+> var s = "";
+> typeof s;
+string
+```
+
+When you use the plus sign with string, this perform string concatenation.
+```
+> var s1 = 'Naveen';
+> var s2 = 'Singh';
+> Var s = s1 + s2;
+> s;
+Naveen Singh
+> typeof s;
+string
+```
+
+### String conversion
