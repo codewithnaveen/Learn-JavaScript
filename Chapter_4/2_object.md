@@ -3,8 +3,8 @@ Let's take a look at a simple object and examine its parts:
 
 ```
 var hero = {
-    breed : 'Trutle';
-    occupation : 'Ninja';
+    breed : 'Trutle',
+    occupation : 'Ninja'
 };
 ```
 
